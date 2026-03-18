@@ -1,0 +1,18 @@
+header {
+    background-color: lavender;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.link--active {
+    color:red;
+    font-weight: bold;
+}
