@@ -1,8 +1,8 @@
 import { useState } from "react"
-import images from "../data.json"
 
 
-export default function useGame(){
+
+export default function useGame(images){
     //список отгаданных карточек
     const [finishedItems, setFinishedItems] = useState([])
     //счетчик шагов
@@ -30,4 +30,11 @@ export default function useGame(){
     //проверка конца игры
     const isWin = finishedItems.length == images.length
 
+    return {
+        finishedItems,
+        stepsCount,
+        isWin,
+        handleReset,
+        checkItems
+    }
 }
