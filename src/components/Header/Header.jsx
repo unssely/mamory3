@@ -12,9 +12,9 @@ export default function Header() {
                     <li>
                         <NavLink to="/game" className={({ isActive }) => (isActive ? 'link--active' : '')}>Игра</NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink to="/images/list" className={({ isActive }) => (isActive ? 'link--active' : '')}>Картинки(вложенные маршруты)</NavLink>
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
         </header>

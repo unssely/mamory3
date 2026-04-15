@@ -4,12 +4,17 @@ import Grid from "../../components/Grid/Grid";
 import Header from "../../components/Header/Header";
 import useGame from "../../components/useGame";
 
-import images from '../../data.json'
-import { useEffect } from "react";
+import data from '../../data.json'
+import { useEffect, useState } from "react";
 import Modal from "../../components/Modal/Modal";
 
 export default function PageGame()
 {
+    const [images, setImages] = useState([]);
+    useEffect(()=>{
+      setImages(data.sort(() => Math.random() - 0.5));
+    },[]);
+ 
    
     const {
         finishedItems,
@@ -25,8 +30,9 @@ export default function PageGame()
     } 
  
     return (
-        <div className='container'>
+        <>
           <Header />
+          <div className='container'>
           <main>      
             <div className="steps">{stepsCount}</div>
 
@@ -54,9 +60,11 @@ export default function PageGame()
               )
             } 
           </main>
-          <footer>
-            <p>&copy; Мухина Юлия, 2026 г.</p>
-          </footer>
+          
         </div>
+        <footer>
+            <p>&copy; Шушарина Юлия, 2026 г.</p>
+          </footer>
+        </>
       )
 }
