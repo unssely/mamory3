@@ -62,9 +62,9 @@ export default function PageGame()
           </main>
           
         </div>
-        <footer>
+        {/* <footer>
             <p>&copy; Шушарина Юлия, 2026 г.</p>
-          </footer>
+          </footer> */}
         </>
       )
 }

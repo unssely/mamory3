@@ -5,7 +5,7 @@ export default function PageMain() {
     return (
         <div>
             <Header />
-            <main>
+            <main className="brules">
                 <p>Правила игры:</p>
                 <ol className="rules">
                     <li>Прваило 1</li>
@@ -14,9 +14,9 @@ export default function PageMain() {
                 </ol>
                 <Link to="/game">Начать играть</Link>
             </main>
-            <footer>
+            {/* <footer>
                 <p>&copy; Мухина Юлия, 2026 г.</p>
-            </footer>
+            </footer> */}
         </div>
     );
 }
